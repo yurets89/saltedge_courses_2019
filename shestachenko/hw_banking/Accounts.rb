@@ -1,58 +1,36 @@
-require 'nokogiri'
-require 'watir'
-require 'pry'
-require 'json'
-
+require_relative 'bank.rb'
 class Accounts
+  include Bank
 
   def initialize
-    login
-    saving_acc_info
-  end
-
-  def browser
-    @browser ||= Watir::Browser.new :chrome
-  end
-
-  def login
-    browser.goto('https://www.victoriabank.md/ru/')
-    browser.img(title: "VB24_web.png").click
-    puts "enter login"
-    login = gets.chomp.to_s
-    puts "enter password"
-    password = gets.chomp.to_s
-    browser.text_field(class: "username").set(login)
-    browser.text_field(name: "password").set(password)
-    browser.button(text: "Login").click
-    browser.wait_until{browser.div(class: "block__cards-accounts").exists?}
-    html_ac
-    
-  end
-
-  def html_ac
-    Nokogiri::HTML.parse(browser.html)
+    account_info
   end
 
   def acc_info
     acc = {
-      name: html_ac.css('span.user-name').text,
-      currency: html_ac.css('span.amount.currency.MDL').text,
-      balance: html_ac.css('span.amount').first.text,
-      nature: "visa"
+      name: @page.css('span.user-name').text,
+      balance: @page.css('span.amount').first.text,
+      currency: @page.css('span.amount.currency.MDL').text,
+      nature: 'visa'
     }
   end
 
   def saving_acc_info
-    acc_hash = {"**Account**" => []}
-    acc_hash["**Account**"] << acc_info
-    file = File.new("acc_info.json", "w")
-    file.puts JSON.pretty_generate(acc_hash)
-    file.close
+    acc = { 'accounts' => [] }
+    acc['accounts'] << acc_info
+    saving_json("account", acc)
+    puts JSON.pretty_generate(acc)
   end
 
+  def account_info
+    log_in
+    html_ac
+    acc_info
+    saving_acc_info
+    browser.close
+  end
+
+  def html_ac
+    @page = Nokogiri::HTML.parse(browser.html)
+  end
 end
-
-
-
-
-yuriy = Accounts.new
