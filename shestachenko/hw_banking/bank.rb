@@ -17,10 +17,8 @@ module Bank
   end
 
   def acc_trans
-    ac = File.read('account.json')
-    ac_parsed = JSON.parse(ac)
-    tr = File.read('transactions.json')
-    tr_parsed = JSON.parse(tr)
+    ac_parsed = JSON.parse(File.read('account.json'))
+    tr_parsed = JSON.parse(File.read('transactions.json'))
     ac = ac_parsed.values.flatten[0]
     ac.delete('nature')
     ac['description'] = 'My checking account'

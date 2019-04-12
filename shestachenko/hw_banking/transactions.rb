@@ -10,7 +10,7 @@ class Transactions
     x = @tr_page.css('li')
     @trans_hash = { 'transactions' => [] }
     x.map do |x|
-      months = x.parent.parent.parent.css('div.month-delimiter').text
+      months = x.xpath('../../preceding-sibling::div[@class = "month-delimiter"]').last.text #stolen from "jeneamocan"
       days = x.parent.parent.css('div.day-header').text.to_i.to_s
       times = x.css('span.history-item-time').text
 

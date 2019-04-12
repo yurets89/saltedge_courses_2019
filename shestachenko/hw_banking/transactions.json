@@ -1,0 +1,94 @@
+{
+  "transactions": [
+    {
+      "date": "31 March 2019 00:00",
+      "description": "Cl Deposit Interests",
+      "amount": "5.02"
+    },
+    {
+      "date": "23 March 2019 16:25",
+      "description": "Payment for ORANGE",
+      "amount": "150.00"
+    },
+    {
+      "date": "23 March 2019 16:24",
+      "description": "Invoice pay STARNET",
+      "amount": "170.00"
+    },
+    {
+      "date": "23 March 2019 16:23",
+      "description": "Invoice pay INFO BON",
+      "amount": "812.71"
+    },
+    {
+      "date": "23 March 2019 16:21",
+      "description": "Invoice pay INFOCOM",
+      "amount": "141.20"
+    },
+    {
+      "date": "23 March 2019 16:19",
+      "description": "Invoice pay INFOCOM",
+      "amount": "51.55"
+    },
+    {
+      "date": "23 March 2019 16:18",
+      "description": "Invoice pay GNF Furnizare Energie",
+      "amount": "140.62"
+    },
+    {
+      "date": "23 March 2019 16:16",
+      "description": "Invoice pay MOLDOVAGAZ",
+      "amount": "50.82"
+    },
+    {
+      "date": "19 March 2019 17:16",
+      "description": "Payment for Orange (699) 433-24",
+      "amount": "150.00"
+    },
+    {
+      "date": "16 March 2019 15:54",
+      "description": "Payment for ORANGE",
+      "amount": "150.00"
+    },
+    {
+      "date": "8 March 2019 17:12",
+      "description": "Plata BONUS UNO CASA 5 CHISINAU MOLDOVA",
+      "amount": "627.84"
+    },
+    {
+      "date": "28 February 2019 00:00",
+      "description": "Cl Deposit Interests",
+      "amount": "3.91"
+    },
+    {
+      "date": "25 February 2019 11:57",
+      "description": "Invoice pay INFOCOM",
+      "amount": "157.16"
+    },
+    {
+      "date": "25 February 2019 11:56",
+      "description": "Invoice pay INFO BON",
+      "amount": "960.17"
+    },
+    {
+      "date": "25 February 2019 11:53",
+      "description": "Invoice pay STARNET",
+      "amount": "170.00"
+    },
+    {
+      "date": "25 February 2019 11:52",
+      "description": "Invoice pay GNF Furnizare Energie",
+      "amount": "168.75"
+    },
+    {
+      "date": "25 February 2019 11:51",
+      "description": "Invoice pay INFOCOM",
+      "amount": "51.55"
+    },
+    {
+      "date": "15 February 2019 15:06",
+      "description": "Creditare VICTORIABANK FIL.8 CHISINAU MOLDOVA",
+      "amount": "7,000.00"
+    }
+  ]
+}
